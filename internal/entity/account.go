@@ -1,8 +1,6 @@
 package entity
 
-import (
-	"time"
-)
+import "time"
 
 type Account struct {
 	ID          int64     `json:"id"`
@@ -10,6 +8,7 @@ type Account struct {
 	Username    string    `json:"username"`
 	JoinedAt    time.Time `json:"joined_at"`
 	DisplayName string    `json:"display_name"`
+	State       string    `json:"state"`
 }
 
 func (a Account) EntityId() ID {
